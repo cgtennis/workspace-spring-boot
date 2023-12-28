@@ -1,0 +1,23 @@
+### Spring Boot Actuator
+Following this lesson: https://www.youtube.com/watch?v=4OVe0MWgZ4k
+C:\cwang\workspace-spring-boot\actuator-demo
+give a bunch of out-of-box configurable end-points, such as "health", "beans" and "info", for diagnosis purpose in a production environment.
+"mapping" --> controller mapping
+beans --> all beans (including custom controller, etc)
+configprops --> configuration
+
+in `application.properties`
+```
+management.endpoints.web.exposure.include=*
+management.endpoint.health.show-details=always
+info.app.name=actuator-demo
+info.app.description=cgtennis actuator demo application
+info.app.version=1.0.0
+info.app.author=Chenggang Wang
+info.app.docs=http://cgtennis.org
+management.info.env.enabled=true
+management.info.build.enabled=true
+management.info.java.enabled=true
+management.info.os.enabled=true
+server.port=8081
+```
