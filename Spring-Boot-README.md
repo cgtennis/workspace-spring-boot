@@ -21,3 +21,12 @@ management.info.java.enabled=true
 management.info.os.enabled=true
 server.port=8081
 ```
+
+### Spring Data JDBC (Not JPA)
+Check the example app in `content-calender` project.
+
+
+### Load Initial Schema
+check the ``content-calender` project
+`spring.sql.init.mode=always`
+need `schema.sql` in the `resources` folder
