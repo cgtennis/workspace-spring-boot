@@ -40,8 +40,13 @@ public class SecurityConfig {
                 .roles("OTHER")
                 .build();
 
+        UserDetails guest = User.withUsername("guest")
+                .password(encoder.encode("123"))
+                .roles("GUEST")
+                .build();
 
-        return new InMemoryUserDetailsManager(admin, user, other);
+
+        return new InMemoryUserDetailsManager(admin, user, other, guest);
     }
 
     // Configuring HttpSecurity

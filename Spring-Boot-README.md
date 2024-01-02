@@ -30,3 +30,7 @@ Check the example app in `content-calender` project.
 check the ``content-calender` project
 `spring.sql.init.mode=always`
 need `schema.sql` in the `resources` folder
+
+
+### Spring Boot Default @Autowire
+Starting with Spring 4.3, if a class, which is configured as a Spring bean, has only one constructor, the @Autowired annotation can be omitted and Spring will use that constructor and inject all necessary dependencies.
