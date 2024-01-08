@@ -38,3 +38,13 @@ Starting with Spring 4.3, if a class, which is configured as a Spring bean, has 
 ### @ReponseBody vs @ReponseEntity
 In summary, @ResponseBody is primarily used to indicate that the return value should be serialized directly into the response body, while @ResponseEntity provides more control over the entire HTTP response, allowing you to set headers, status code, and handle various response types
 @RestController annotation include @Controller and @ResponseBody
+ResponseEntity uses builder pattern.
+```
+BodyBuilder accepted();
+BodyBuilder badRequest();
+BodyBuilder created(java.net.URI location);
+HeadersBuilder<?> noContent();
+HeadersBuilder<?> notFound();
+BodyBuilder ok();
+# BodyBuilder.body() returns a ResponseEntity instead of BodyBuilder, it should be the last call.
+```
