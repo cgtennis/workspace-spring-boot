@@ -34,3 +34,7 @@ need `schema.sql` in the `resources` folder
 
 ### Spring Boot Default @Autowire
 Starting with Spring 4.3, if a class, which is configured as a Spring bean, has only one constructor, the @Autowired annotation can be omitted and Spring will use that constructor and inject all necessary dependencies.
+
+### @ReponseBody vs @ReponseEntity
+In summary, @ResponseBody is primarily used to indicate that the return value should be serialized directly into the response body, while @ResponseEntity provides more control over the entire HTTP response, allowing you to set headers, status code, and handle various response types
+@RestController annotation include @Controller and @ResponseBody
