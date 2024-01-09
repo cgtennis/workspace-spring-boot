@@ -40,11 +40,6 @@ In summary, @ResponseBody is primarily used to indicate that the return value sh
 @RestController annotation include @Controller and @ResponseBody
 ResponseEntity uses builder pattern.
 ```
-BodyBuilder accepted();
-BodyBuilder badRequest();
-BodyBuilder created(java.net.URI location);
-HeadersBuilder<?> noContent();
-HeadersBuilder<?> notFound();
-BodyBuilder ok();
-# BodyBuilder.body() returns a ResponseEntity instead of BodyBuilder, it should be the last call.
+# simple usage
+return ResponseEntity.ok(List<Student>);
 ```
